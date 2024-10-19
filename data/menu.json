@@ -1,184 +1,340 @@
 {
-    "menu": [
-      {
-        "section": "Completos",
-        "items": [
-          {
-            "name": "Italiano grande",
-            "price": 2000
-          },
-          {
-            "name": "Italiano chico",
-            "price": 1000
-          },
-          {
-            "name": "Dinámico grande",
-            "price": 2300
-          },
-          {
-            "name": "Dinámico chico",
-            "price": 1300
-          },
-          {
-            "name": "Palta mayo grande",
-            "price": 2000
-          },
-          {
-            "name": "Palta mayo chico",
-            "price": 1000
-          },
-          {
-            "name": "Tomate mayo grande",
-            "price": 2000
-          },
-          {
-            "name": "Tomate mayo chico",
-            "price": 1000
-          }
-        ]
-      },
-      {
-        "section": "As (Churrascos de Vacuno)",
-        "items": [
-          {
-            "name": "Italiano grande",
-            "price": 3500
-          },
-          {
-            "name": "Italiano chico",
-            "price": 2500
-          },
-          {
-            "name": "Dinámico grande",
-            "price": 3500
-          },
-          {
-            "name": "Dinámico chico",
-            "price": 2500
-          },
-          {
-            "name": "Palta mayo grande",
-            "price": 3500
-          },
-          {
-            "name": "Palta mayo chico",
-            "price": 2500
-          },
-          {
-            "name": "Tomate mayo grande",
-            "price": 3500
-          },
-          {
-            "name": "Tomate mayo chico",
-            "price": 2500
-          }
-        ]
-      },
-      {
-        "section": "Lomos",
-        "items": [
-          {
-            "name": "Chacarero",
-            "price": 5000,
-            "description": "lomito de cerdo, tomate, porotos verdes, ají amarillo, mayonesa"
-          },
-          {
-            "name": "Lomo a lo pobre",
-            "price": 5000,
-            "description": "cebolla caramelizada, papas fritas, huevo"
-          },
-          {
-            "name": "Lomo brasileño",
-            "price": 5000,
-            "description": "queso fundido, palta"
-          },
-          {
-            "name": "Lomo italiano",
-            "price": 4500,
-            "description": "palta, tomate, mayonesa"
-          },
-          {
-            "name": "Lomo luco",
-            "price": 4500,
-            "description": "lomito de cerdo, queso fundido"
-          }
-        ]
-      },
-      {
-        "section": "Churrascos",
-        "items": [
-          {
-            "name": "Chacarero",
-            "price": 5500,
-            "description": "churrasco de vacuno, tomate, porotos verdes, ají amarillo, mayonesa"
-          },
-          {
-            "name": "Churrasco a lo pobre",
-            "price": 5500,
-            "description": "cebolla caramelizada, papas fritas, huevo"
-          },
-          {
-            "name": "Churrasco brasileño",
-            "price": 5000,
-            "description": "queso fundido, palta"
-          },
-          {
-            "name": "Churrasco italiano",
-            "price": 5000,
-            "description": "palta, tomate, mayonesa"
-          },
-          {
-            "name": "Churrasco luco",
-            "price": 5000,
-            "description": "churrasco de vacuno, queso fundido"
-          }
-        ]
-      },
-      {
-        "section": "Papas Fritas y Salchipapas",
-        "items": [
-          {
-            "name": "Papas Fritas Individual",
-            "price": 3000
-          },
-          {
-            "name": "Papas Fritas Familiar",
-            "price": 6000
-          },
-          {
-            "name": "Salchipapas Individual",
-            "price": 4000
-          },
-          {
-            "name": "Salchipapas Familiar",
-            "price": 7000
-          }
-        ]
-      },
-      {
-        "section": "Chorrillanas",
-        "items": [
-          {
-            "name": "Chorrillana Tradicional",
-            "price": 6000,
-            "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, huevo"
-          },
-          {
-            "name": "Chorrillana Vegetariana",
-            "price": 6000,
-            "description": "papas caseras, choclo, champiñones, crema, ciboulette"
-          },
-          {
-            "name": "Chorrillana Tradicional 2",
-            "price": 7000,
-            "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, chorizo, vienesas, huevo"
-          },
-          {
-            "name": "Chorrillana Familiar",
-            "price": 10000
-          }
-        ]
-      }
-    ]
-  }
-  
+  "menu": [
+    {
+      "section": "Completos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Italiano grande",
+          "price": 2000,
+          "image": "img/completo_italiano.png"
+        },
+        {
+          "name": "Italiano chico",
+          "price": 1000
+        },
+        {
+          "name": "Dinámico grande",
+          "price": 2300,
+          "image": "img/completo_dinamico.png"
+        },
+        {
+          "name": "Dinámico chico",
+          "price": 1300
+        },
+        {
+          "name": "Palta mayo grande",
+          "price": 2000,
+          "image": "img/completo_palta_mayo.webp"
+        },
+        {
+          "name": "Palta mayo chico",
+          "price": 1000
+        },
+        {
+          "name": "Tomate mayo grande",
+          "price": 2000
+        },
+        {
+          "name": "Tomate mayo chico",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "section": "As (Churrascos de Vacuno)",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Italiano grande",
+          "price": 3500,
+          "image": "img/as_italiano.jpg"
+        },
+        {
+          "name": "Italiano chico",
+          "price": 2500
+        },
+        {
+          "name": "Dinámico grande",
+          "price": 3500,
+          "image": "img/as_dinamico.png"
+        },
+        {
+          "name": "Dinámico chico",
+          "price": 2500
+        },
+        {
+          "name": "Palta mayo grande",
+          "price": 3500
+        
+        },
+        {
+          "name": "Palta mayo chico",
+          "price": 2500
+        },
+        {
+          "name": "Tomate mayo grande",
+          "price": 3500
+        },
+        {
+          "name": "Tomate mayo chico",
+          "price": 2500
+        }
+      ]
+    },
+    {
+      "section": "Lomos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Chacarero",
+          "price": 5000,
+          "description": "lomito de cerdo, tomate, porotos verdes, ají amarillo, mayonesa",
+          "image": "img/lomo_chacarero.png"
+        },
+        {
+          "name": "Lomo a lo pobre",
+          "price": 5000,
+          "description": "cebolla caramelizada, papas fritas, huevo",
+          "image": "img/lomo_a_lo_pobre_sandwich.png"
+        },
+        {
+          "name": "Lomo brasileño",
+          "price": 5000,
+          "description": "queso fundido, palta",
+          "image": "img/lomo_brasileno.webp"
+        },
+        {
+          "name": "Lomo italiano",
+          "price": 4500,
+          "description": "palta, tomate, mayonesa",
+          "image": "img/lomo_italiano.png"
+        },
+        {
+          "name": "Lomo luco",
+          "price": 4500,
+          "description": "lomito de cerdo, queso fundido"
+        }
+      ]
+    },
+    {
+      "section": "Churrascos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Chacarero",
+          "price": 5500,
+          "description": "churrasco de vacuno, tomate, porotos verdes, ají amarillo, mayonesa",
+          "image": "img/churrasco_chacarero.webp"
+        },
+        {
+          "name": "Churrasco a lo pobre",
+          "price": 5500,
+          "description": "cebolla caramelizada, papas fritas, huevo",
+          "image": "img/churrasco_a_lo_pobre.png"
+        },
+        {
+          "name": "Churrasco brasileño",
+          "price": 5000,
+          "description": "queso fundido, palta",
+          "image": "img/churrasco_brasileno.webp"
+        },
+        {
+          "name": "Churrasco italiano",
+          "price": 5000,
+          "description": "palta, tomate, mayonesa",
+          "image": "img/churrasco_italiano.webp"
+        },
+        {
+          "name": "Churrasco luco",
+          "price": 5000,
+          "description": "churrasco de vacuno, queso fundido"
+        }
+      ]
+    },
+    {
+      "section": "Papas Fritas y Salchipapas",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Papas Fritas Individual",
+          "price": 3000,
+          "image": "img/papas_fritas_2.png"
+        },
+        {
+          "name": "Papas Fritas Familiar",
+          "price": 6000,
+          "image": "img/papas_fritas.png"
+        },
+        {
+          "name": "Salchipapas Individual",
+          "price": 4000,
+          "image": "img/salchipapas_1.png"
+        },
+        {
+          "name": "Salchipapas Familiar",
+          "price": 7000
+        }
+      ]
+    },
+    {
+      "section": "Chorrillanas",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Chorrillana Tradicional",
+          "price": 6000,
+          "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, huevo",
+          "image": "img/chorrillana_1.png"
+        },
+        {
+          "name": "Chorrillana Vegetariana",
+          "price": 6000,
+          "description": "papas caseras, choclo, champiñones, crema, ciboulette",
+          "image": "img/chorrillana_vegetariana.png"
+        },
+        {
+          "name": "Chorrillana Tradicional 2",
+          "price": 7000,
+          "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, chorizo, vienesas, huevo"
+        },
+        {
+          "name": "Chorrillana Familiar",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "section": "Bebidas, agua y jugos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Coca cola, Fanta, Sprite 237 ml",
+          "price": 1000
+        },
+        {
+          "name": "Coca cola, Fanta, Sprite 1L",
+          "price": 2000
+        },
+        {
+          "name": "Agua mineral con y sin gas",
+          "price": 1000
+        },
+        {
+          "name": "Jugos naturales",
+          "price": 2500
+        },
+        {
+          "name": "Té, café, milo",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "section": "Tragos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Mojito cubano o sabores 1/2 litro",
+          "price": 4000
+        },
+        {
+          "name": "Mojito cubano o sabores 1L",
+          "price": 6000
+        },
+        {
+          "name": "Mojito corona",
+          "price": 6000
+        },
+        {
+          "name": "Ramazzotti 1/2 litro",
+          "price": 4000
+        },
+        {
+          "name": "Ramazzotti 1L",
+          "price": 6000
+        },
+        {
+          "name": "Eléctric lemonade 1/2 litro",
+          "price": 4000
+        },
+        {
+          "name": "Electric lemonade 1L",
+          "price": 6000
+        },
+        {
+          "name": "Caipiriña 1/2 litro",
+          "price": 4000
+        },
+        {
+          "name": "Caipiriña 1 L",
+          "price": 6000
+        },
+        {
+          "name": "Tequila margarita",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "section": "Cervezas y vinos",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Cristal o Escudo 1.2",
+          "price": 3000
+        },
+        {
+          "name": "Royal o Heineken",
+          "price": 3500
+        },
+        {
+          "name": "Malta morenita 1.2",
+          "price": 4000
+        },
+        {
+          "name": "Escudo y Cristal 470cc",
+          "price": 1500
+        },
+        {
+          "name": "Malta morenita 470cc",
+          "price": 2000
+        },
+        {
+          "name": "Corona, Stella, Heineken 330cc",
+          "price": 3000
+        },
+        {
+          "name": "Shop chico Escudo",
+          "price": 1500
+        },
+        {
+          "name": "Shop medio Escudo",
+          "price": 2500
+        },
+        {
+          "name": "Jirafa de shop Escudo",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "section": "Extras",
+      "image": "img/section_bg.webp",
+      "items": [
+        {
+          "name": "Medio tinto",
+          "price": 1500
+        },
+        {
+          "name": "Caña tinto",
+          "price": 1000
+        },
+        {
+          "name": "Jote",
+          "price": 2000
+        }
+      ]
+    }
+  ]
+}

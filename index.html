@@ -5,103 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta de Menú del Restaurante</title>
-    <link href="dist/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'highlight': '#ffa500',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-black text-gold font-playfair">
+<body class="bg-white text-black font-playfair">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-5xl font-bold text-center mb-8">Restaurante Donde la Ingrid</h1>
+        <h1 class="text-5xl font-bold text-center mb-12 text-highlight">Restaurante Donde la Ingrid</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu-container"></div>
+        <!-- Contenedor principal del menú -->
+        <div id="menu-container" class="space-y-16"></div>
     </div>
 
-
     <!-- Footer -->
-    <footer class="text-center py-8 bg-black border-t-2 border-gold">
-        <p class="text-xl mb-4">"Donde la Ingrid"</p>
+    <footer class="text-center py-8 bg-white border-t-2 border-yellow-500 mt-16">
+        <p class="text-2xl mb-4 text-highlight">"Donde la Ingrid"</p>
         <div class="flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-4 md:space-y-0">
-            <!-- Teléfono -->
-            <!-- <div class="flex items-center space-x-2">
-                <i class="fas fa-phone-alt text-gold"></i>
-                <p>Teléfono: +56 9 8765 4321</p>
-            </div> -->
-            <!-- WhatsApp -->
             <div class="flex items-center space-x-2">
-                <i class="fab fa-whatsapp text-gold"></i>
-                <p>WhatsApp: +56 9 4424 1367</p>
+                <i class="fab fa-whatsapp text-highlight"></i>
+                <p class="text-highlight">WhatsApp: +56 9 4424 1367</p>
             </div>
         </div>
     </footer>
 
-
     <script>
-        // Cargar el JSON y generar el menú dinámicamente
+        // Cargar los datos del menú desde un archivo JSON
         fetch('data/menu.json')
             .then(response => response.json())
             .then(data => {
                 const menuContainer = document.getElementById('menu-container');
-                data.menu.forEach(section => {
-                    // Crear el contenedor de cada sección
+
+                // Iterar sobre cada sección del menú
+                data.menu.forEach((section, index) => {
+                    // Crear el contenedor de la sección
                     const sectionDiv = document.createElement('div');
-                    sectionDiv.classList.add('border-2', 'border-gold', 'p-6', 'relative', 'transition', 'duration-300'); // Agregar clases de transición
+                    sectionDiv.id = `section-${index}`;
+                    sectionDiv.classList.add('relative', 'p-8', 'rounded-xl', 'transition', 'duration-300', 'min-h-[600px]', 'flex', 'items-center', 'border-2', 'border-orange-300', 'overflow-hidden');
+                    
+                    // Imagen de fondo
+                    const bgImage = document.createElement('img');
+                    bgImage.src = section.image;
+                    bgImage.alt = `Fondo de ${section.section}`;
+                    bgImage.classList.add('absolute', 'inset-0', 'w-full', 'h-full', 'object-cover', 'z-0');
+                    sectionDiv.appendChild(bgImage);
 
-                    // Agregar efecto de hover
-                    sectionDiv.addEventListener('mouseover', () => {
-                        sectionDiv.classList.add('bg-gold', 'bg-opacity-10');
-                    });
-                    sectionDiv.addEventListener('mouseout', () => {
-                        sectionDiv.classList.remove('bg-gold', 'bg-opacity-10');
-                    });
+                    // Capa semitransparente
+                    const overlay = document.createElement('div');
+                    overlay.classList.add('absolute', 'inset-0', 'bg-white', 'bg-opacity-90', 'z-10');
+                    sectionDiv.appendChild(overlay);
 
-                    // Crear las esquinas decorativas
-                    const topLeftCorner = document.createElement('div');
-                    topLeftCorner.classList.add('absolute', 'top-0', 'left-0', 'w-8', 'h-8', 'border-t-2', 'border-l-2', 'border-gold');
-                    sectionDiv.appendChild(topLeftCorner);
-
-                    const topRightCorner = document.createElement('div');
-                    topRightCorner.classList.add('absolute', 'top-0', 'right-0', 'w-8', 'h-8', 'border-t-2', 'border-r-2', 'border-gold');
-                    sectionDiv.appendChild(topRightCorner);
-
-                    const bottomLeftCorner = document.createElement('div');
-                    bottomLeftCorner.classList.add('absolute', 'bottom-0', 'left-0', 'w-8', 'h-8', 'border-b-2', 'border-l-2', 'border-gold');
-                    sectionDiv.appendChild(bottomLeftCorner);
-
-                    const bottomRightCorner = document.createElement('div');
-                    bottomRightCorner.classList.add('absolute', 'bottom-0', 'right-0', 'w-8', 'h-8', 'border-b-2', 'border-r-2', 'border-gold');
-                    sectionDiv.appendChild(bottomRightCorner);
+                    // Crear el contenido de la sección
+                    const sectionContent = document.createElement('div');
+                    sectionContent.classList.add('relative', 'z-20', 'w-full', 'max-w-5xl', 'mx-auto');
 
                     // Título de la sección
                     const sectionTitle = document.createElement('h2');
-                    sectionTitle.classList.add('text-3xl', 'font-semibold', 'mb-4');
+                    sectionTitle.classList.add('text-4xl', 'font-bold', 'mb-8', 'text-highlight', 'text-center');
                     sectionTitle.textContent = section.section;
-                    sectionDiv.appendChild(sectionTitle);
+                    sectionContent.appendChild(sectionTitle);
 
-                    // Crear el contenedor de los items
+                    // Contenedor de los elementos del menú
                     const itemsDiv = document.createElement('div');
-                    itemsDiv.classList.add('space-y-4');
+                    itemsDiv.classList.add('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-x-8', 'gap-y-6');
 
+                    // Iterar sobre cada elemento del menú en la sección
                     section.items.forEach(item => {
-                        // Crear cada item del menú
                         const itemDiv = document.createElement('div');
-                        const itemPrice = document.createElement('p');
-                        itemPrice.classList.add('flex', 'justify-between', 'text-lg');  // Aumentar el tamaño de fuente si es necesario
-                        itemPrice.innerHTML = `<span>${item.name}</span><span>$${item.price}</span>`;
-                        itemDiv.appendChild(itemPrice);
+                        itemDiv.classList.add('flex', 'flex-col', 'items-center', 'space-y-4', 'bg-orange-100', 'transition', 'duration-300', 'justify-center', 'hover:bg-orange-200', 'p-8', 'rounded-xl');	
 
-                        // Si tiene descripción, agregarla
-                        if (item.description) {
-                            const itemDescription = document.createElement('p');
-                            itemDescription.classList.add('text-sm');
-                            itemDescription.textContent = item.description;
-                            itemDiv.appendChild(itemDescription);
+                        // Agregar la imagen si existe
+                        if (item.image) {
+                            const imageWrapper = document.createElement('div');
+                            imageWrapper.classList.add('w-full', 'aspect-w-4', 'aspect-h-2');
+                            const itemImage = document.createElement('img');
+                            itemImage.src = item.image;
+                            itemImage.alt = item.name;
+                            itemImage.classList.add('w-full', 'h-full', 'object-contain', 'object-center', 'rounded-md');
+                            imageWrapper.appendChild(itemImage);
+
+                            itemDiv.appendChild(imageWrapper);
                         }
 
+                        // Contenedor de información del elemento
+                        const itemInfo = document.createElement('div');
+                        itemInfo.classList.add('text-center', 'w-full');
+
+                        // Nombre del elemento
+                        const itemName = document.createElement('h3');
+                        itemName.classList.add('text-3xl', 'font-semibold', 'text-highlight');
+                        itemName.textContent = item.name;
+                        itemInfo.appendChild(itemName);
+
+                        // Descripción del elemento (si existe)
+                        if (item.description) {
+                            const itemDescription = document.createElement('p');
+                            itemDescription.classList.add('text-lg', 'text-gray-600', 'mt-1', 'font-roboto');
+                            itemDescription.textContent = item.description;
+                            itemInfo.appendChild(itemDescription);
+                        }
+
+                        // Precio del elemento
+                        const itemPrice = document.createElement('p');
+                        itemPrice.classList.add('text-2xl', 'font-semibold', 'text-black', 'mt-2');
+                        itemPrice.textContent = `$${item.price}`;
+                        itemInfo.appendChild(itemPrice);
+
+                        itemDiv.appendChild(itemInfo);
                         itemsDiv.appendChild(itemDiv);
                     });
 
-                    sectionDiv.appendChild(itemsDiv);
+                    sectionContent.appendChild(itemsDiv);
+                    sectionDiv.appendChild(sectionContent);
                     menuContainer.appendChild(sectionDiv);
                 });
             })
@@ -109,8 +138,6 @@
                 console.error('Error fetching the JSON:', error);
             });
     </script>
-
-
 </body>
 
 </html>

@@ -5,6 +5,7 @@ package.json
 yarn.lock
 
 # Tailwind CSS build output
+dist/
 public/build/
 *.css.map
 
