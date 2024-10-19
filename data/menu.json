@@ -1,0 +1,184 @@
+{
+    "menu": [
+      {
+        "section": "Completos",
+        "items": [
+          {
+            "name": "Italiano grande",
+            "price": 2000
+          },
+          {
+            "name": "Italiano chico",
+            "price": 1000
+          },
+          {
+            "name": "Dinámico grande",
+            "price": 2300
+          },
+          {
+            "name": "Dinámico chico",
+            "price": 1300
+          },
+          {
+            "name": "Palta mayo grande",
+            "price": 2000
+          },
+          {
+            "name": "Palta mayo chico",
+            "price": 1000
+          },
+          {
+            "name": "Tomate mayo grande",
+            "price": 2000
+          },
+          {
+            "name": "Tomate mayo chico",
+            "price": 1000
+          }
+        ]
+      },
+      {
+        "section": "As (Churrascos de Vacuno)",
+        "items": [
+          {
+            "name": "Italiano grande",
+            "price": 3500
+          },
+          {
+            "name": "Italiano chico",
+            "price": 2500
+          },
+          {
+            "name": "Dinámico grande",
+            "price": 3500
+          },
+          {
+            "name": "Dinámico chico",
+            "price": 2500
+          },
+          {
+            "name": "Palta mayo grande",
+            "price": 3500
+          },
+          {
+            "name": "Palta mayo chico",
+            "price": 2500
+          },
+          {
+            "name": "Tomate mayo grande",
+            "price": 3500
+          },
+          {
+            "name": "Tomate mayo chico",
+            "price": 2500
+          }
+        ]
+      },
+      {
+        "section": "Lomos",
+        "items": [
+          {
+            "name": "Chacarero",
+            "price": 5000,
+            "description": "lomito de cerdo, tomate, porotos verdes, ají amarillo, mayonesa"
+          },
+          {
+            "name": "Lomo a lo pobre",
+            "price": 5000,
+            "description": "cebolla caramelizada, papas fritas, huevo"
+          },
+          {
+            "name": "Lomo brasileño",
+            "price": 5000,
+            "description": "queso fundido, palta"
+          },
+          {
+            "name": "Lomo italiano",
+            "price": 4500,
+            "description": "palta, tomate, mayonesa"
+          },
+          {
+            "name": "Lomo luco",
+            "price": 4500,
+            "description": "lomito de cerdo, queso fundido"
+          }
+        ]
+      },
+      {
+        "section": "Churrascos",
+        "items": [
+          {
+            "name": "Chacarero",
+            "price": 5500,
+            "description": "churrasco de vacuno, tomate, porotos verdes, ají amarillo, mayonesa"
+          },
+          {
+            "name": "Churrasco a lo pobre",
+            "price": 5500,
+            "description": "cebolla caramelizada, papas fritas, huevo"
+          },
+          {
+            "name": "Churrasco brasileño",
+            "price": 5000,
+            "description": "queso fundido, palta"
+          },
+          {
+            "name": "Churrasco italiano",
+            "price": 5000,
+            "description": "palta, tomate, mayonesa"
+          },
+          {
+            "name": "Churrasco luco",
+            "price": 5000,
+            "description": "churrasco de vacuno, queso fundido"
+          }
+        ]
+      },
+      {
+        "section": "Papas Fritas y Salchipapas",
+        "items": [
+          {
+            "name": "Papas Fritas Individual",
+            "price": 3000
+          },
+          {
+            "name": "Papas Fritas Familiar",
+            "price": 6000
+          },
+          {
+            "name": "Salchipapas Individual",
+            "price": 4000
+          },
+          {
+            "name": "Salchipapas Familiar",
+            "price": 7000
+          }
+        ]
+      },
+      {
+        "section": "Chorrillanas",
+        "items": [
+          {
+            "name": "Chorrillana Tradicional",
+            "price": 6000,
+            "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, huevo"
+          },
+          {
+            "name": "Chorrillana Vegetariana",
+            "price": 6000,
+            "description": "papas caseras, choclo, champiñones, crema, ciboulette"
+          },
+          {
+            "name": "Chorrillana Tradicional 2",
+            "price": 7000,
+            "description": "papas caseras, cebolla caramelizada, carne de vacuno y cerdo, chorizo, vienesas, huevo"
+          },
+          {
+            "name": "Chorrillana Familiar",
+            "price": 10000
+          }
+        ]
+      }
+    ]
+  }
+  

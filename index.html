@@ -1,221 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta de Menú del Restaurante</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dist/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'playfair': ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        'gold': '#ffd700',
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body class="bg-black text-gold font-playfair">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-5xl font-bold text-center mb-8">Restaurante Donde la Ingrid</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Completos -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">Completos</h2>
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-2xl font-medium">Italianos</h3>
-                        <p class="flex justify-between"><span>Italiano grande</span><span>$2.000</span></p>
-                        <p class="flex justify-between"><span>Italiano chico</span><span>$1.000</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Dinámicos</h3>
-                        <p class="flex justify-between"><span>Dinámico grande</span><span>$2.300</span></p>
-                        <p class="flex justify-between"><span>Dinámico chico</span><span>$1.300</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Palta Mayo</h3>
-                        <p class="flex justify-between"><span>Palta mayo grande</span><span>$2.000</span></p>
-                        <p class="flex justify-between"><span>Palta mayo chico</span><span>$1.000</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Tomate Mayo</h3>
-                        <p class="flex justify-between"><span>Tomate mayo grande</span><span>$2.000</span></p>
-                        <p class="flex justify-between"><span>Tomate mayo chico</span><span>$1.000</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- As (Churrascos de Vacuno) -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">As (Churrascos de Vacuno)</h2>
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-2xl font-medium">Italianos</h3>
-                        <p class="flex justify-between"><span>Italiano grande</span><span>$3.500</span></p>
-                        <p class="flex justify-between"><span>Italiano chico</span><span>$2.500</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Dinámicos</h3>
-                        <p class="flex justify-between"><span>Dinámico grande</span><span>$3.500</span></p>
-                        <p class="flex justify-between"><span>Dinámico chico</span><span>$2.500</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Palta Mayo</h3>
-                        <p class="flex justify-between"><span>Palta mayo grande</span><span>$3.500</span></p>
-                        <p class="flex justify-between"><span>Palta mayo chico</span><span>$2.500</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Tomate Mayo</h3>
-                        <p class="flex justify-between"><span>Tomate mayo grande</span><span>$3.500</span></p>
-                        <p class="flex justify-between"><span>Tomate mayo chico</span><span>$2.500</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lomos -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">Lomos</h2>
-                <ul class="space-y-2">
-                    <li class="flex justify-between"><span class="font-medium">Chacarero</span><span>$5.000</span></li>
-                    <li class="text-sm">(lomito de cerdo, tomate, porotos verdes, ají amarillo, mayonesa)</li>
-                    <li class="flex justify-between"><span class="font-medium">Lomo a lo pobre</span><span>$5.000</span></li>
-                    <li class="text-sm">(cebolla caramelizada, papas fritas, huevo)</li>
-                    <li class="flex justify-between"><span class="font-medium">Lomo brasileño</span><span>$5.000</span></li>
-                    <li class="text-sm">(queso fundido, palta)</li>
-                    <li class="flex justify-between"><span class="font-medium">Lomo italiano</span><span>$4.500</span></li>
-                    <li class="text-sm">(palta, tomate, mayonesa)</li>
-                    <li class="flex justify-between"><span class="font-medium">Lomo luco</span><span>$4.500</span></li>
-                    <li class="text-sm">(lomito de cerdo, queso fundido)</li>
-                </ul>
-            </div>
-
-            <!-- Churrascos -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">Churrascos</h2>
-                <ul class="space-y-2">
-                    <li class="flex justify-between"><span class="font-medium">Chacarero</span><span>$5.500</span></li>
-                    <li class="text-sm">(churrasco de vacuno, tomate, porotos verdes, ají amarillo, mayonesa)</li>
-                    <li class="flex justify-between"><span class="font-medium">Churrasco a lo pobre</span><span>$5.500</span></li>
-                    <li class="text-sm">(cebolla caramelizada, papas fritas, huevo)</li>
-                    <li class="flex justify-between"><span class="font-medium">Churrasco brasileño</span><span>$5.000</span></li>
-                    <li class="text-sm">(queso fundido, palta)</li>
-                    <li class="flex justify-between"><span class="font-medium">Churrasco italiano</span><span>$5.000</span></li>
-                    <li class="text-sm">(palta, tomate, mayonesa)</li>
-                    <li class="flex justify-between"><span class="font-medium">Churrasco luco</span><span>$5.000</span></li>
-                    <li class="text-sm">(churrasco de vacuno, queso fundido)</li>
-                </ul>
-            </div>
-
-            <!-- Papas Fritas y Salchipapas -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">Papas Fritas y Salchipapas</h2>
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-2xl font-medium">Papas Fritas</h3>
-                        <p class="flex justify-between"><span>Individual</span><span>$3.000</span></p>
-                        <p class="flex justify-between"><span>Familiar</span><span>$6.000</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Salchipapas</h3>
-                        <p class="flex justify-between"><span>Individual</span><span>$4.000</span></p>
-                        <p class="flex justify-between"><span>Familiar</span><span>$7.000</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chorrillanas -->
-            <div class="border-2 border-gold p-6 relative">
-                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold"></div>
-                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold"></div>
-                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold"></div>
-                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold"></div>
-                <h2 class="text-3xl font-semibold mb-4">Chorrillanas</h2>
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="text-2xl font-medium">Chorrillana Tradicional</h3>
-                        <p class="flex justify-between"><span>Individual</span><span>$6.000</span></p>
-                        <p class="text-sm">(papas caseras, cebolla caramelizada, carne de vacuno y cerdo, huevo)</p>
-                        <p class="flex justify-between"><span>Familiar</span><span>$10.000</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Chorrillana Vegetariana</h3>
-                        <p class="flex justify-between"><span>Individual</span><span>$6.000</span></p>
-                        <p class="text-sm">(papas caseras, choclo, champiñones, crema, ciboulette)</p>
-                        <p class="flex justify-between"><span>Familiar</span><span>$10.000</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-medium">Chorrillana Tradicional 2</h3>
-                        <p class="flex justify-between"><span>Individual</span><span>$7.000</span></p>
-                        <p class="text-sm">(papas caseras, cebolla caramelizada, carne de vacuno y cerdo, chorizo, vienesas, huevo)</p>
-                        <p class="flex justify-between"><span>Familiar</span><span>$11.000</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu-container"></div>
     </div>
-    
-    <!-- Decorative elements -->
-    <div class="fixed top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-gold"></div>
-    <div class="fixed top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-gold"></div>
-    <div class="fixed bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-gold"></div>
-    <div class="fixed bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-gold"></div>
-    
-    <!-- Art Deco divider -->
-    <div class="container mx-auto my-8">
-        <div class="flex items-center justify-center">
-            <div class="flex-grow border-t-2 border-gold"></div>
-            <div class="mx-4">
-                <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 3.5l1.5 3 3.5.5-2.5 2.5.5 3.5-3-1.5-3 1.5.5-3.5-2.5-2.5 3.5-.5z"></path>
-                </svg>
-            </div>
-            <div class="flex-grow border-t-2 border-gold"></div>
-        </div>
-    </div>
+
 
     <!-- Footer -->
-    <footer class="text-center py-8">
-        <p class="text-xl">"Donde la comida se convierte en arte"</p>
+    <footer class="text-center py-8 bg-black border-t-2 border-gold">
+        <p class="text-xl mb-4">"Donde la Ingrid"</p>
+        <div class="flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-4 md:space-y-0">
+            <!-- Teléfono -->
+            <!-- <div class="flex items-center space-x-2">
+                <i class="fas fa-phone-alt text-gold"></i>
+                <p>Teléfono: +56 9 8765 4321</p>
+            </div> -->
+            <!-- WhatsApp -->
+            <div class="flex items-center space-x-2">
+                <i class="fab fa-whatsapp text-gold"></i>
+                <p>WhatsApp: +56 9 4424 1367</p>
+            </div>
+        </div>
     </footer>
 
+
     <script>
-        // Add some interactivity
-        document.querySelectorAll('.border-2').forEach(el => {
-            el.addEventListener('mouseover', () => {
-                el.classList.add('bg-gold', 'bg-opacity-10', 'transition', 'duration-300');
+        // Cargar el JSON y generar el menú dinámicamente
+        fetch('data/menu.json')
+            .then(response => response.json())
+            .then(data => {
+                const menuContainer = document.getElementById('menu-container');
+                data.menu.forEach(section => {
+                    // Crear el contenedor de cada sección
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.classList.add('border-2', 'border-gold', 'p-6', 'relative', 'transition', 'duration-300'); // Agregar clases de transición
+
+                    // Agregar efecto de hover
+                    sectionDiv.addEventListener('mouseover', () => {
+                        sectionDiv.classList.add('bg-gold', 'bg-opacity-10');
+                    });
+                    sectionDiv.addEventListener('mouseout', () => {
+                        sectionDiv.classList.remove('bg-gold', 'bg-opacity-10');
+                    });
+
+                    // Crear las esquinas decorativas
+                    const topLeftCorner = document.createElement('div');
+                    topLeftCorner.classList.add('absolute', 'top-0', 'left-0', 'w-8', 'h-8', 'border-t-2', 'border-l-2', 'border-gold');
+                    sectionDiv.appendChild(topLeftCorner);
+
+                    const topRightCorner = document.createElement('div');
+                    topRightCorner.classList.add('absolute', 'top-0', 'right-0', 'w-8', 'h-8', 'border-t-2', 'border-r-2', 'border-gold');
+                    sectionDiv.appendChild(topRightCorner);
+
+                    const bottomLeftCorner = document.createElement('div');
+                    bottomLeftCorner.classList.add('absolute', 'bottom-0', 'left-0', 'w-8', 'h-8', 'border-b-2', 'border-l-2', 'border-gold');
+                    sectionDiv.appendChild(bottomLeftCorner);
+
+                    const bottomRightCorner = document.createElement('div');
+                    bottomRightCorner.classList.add('absolute', 'bottom-0', 'right-0', 'w-8', 'h-8', 'border-b-2', 'border-r-2', 'border-gold');
+                    sectionDiv.appendChild(bottomRightCorner);
+
+                    // Título de la sección
+                    const sectionTitle = document.createElement('h2');
+                    sectionTitle.classList.add('text-3xl', 'font-semibold', 'mb-4');
+                    sectionTitle.textContent = section.section;
+                    sectionDiv.appendChild(sectionTitle);
+
+                    // Crear el contenedor de los items
+                    const itemsDiv = document.createElement('div');
+                    itemsDiv.classList.add('space-y-4');
+
+                    section.items.forEach(item => {
+                        // Crear cada item del menú
+                        const itemDiv = document.createElement('div');
+                        const itemPrice = document.createElement('p');
+                        itemPrice.classList.add('flex', 'justify-between', 'text-lg');  // Aumentar el tamaño de fuente si es necesario
+                        itemPrice.innerHTML = `<span>${item.name}</span><span>$${item.price}</span>`;
+                        itemDiv.appendChild(itemPrice);
+
+                        // Si tiene descripción, agregarla
+                        if (item.description) {
+                            const itemDescription = document.createElement('p');
+                            itemDescription.classList.add('text-sm');
+                            itemDescription.textContent = item.description;
+                            itemDiv.appendChild(itemDescription);
+                        }
+
+                        itemsDiv.appendChild(itemDiv);
+                    });
+
+                    sectionDiv.appendChild(itemsDiv);
+                    menuContainer.appendChild(sectionDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the JSON:', error);
             });
-            el.addEventListener('mouseout', () => {
-                el.classList.remove('bg-gold', 'bg-opacity-10', 'transition', 'duration-300');
-            });
-        });
     </script>
+
+
 </body>
+
 </html>
