@@ -1,143 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta de Menú del Restaurante</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'highlight': '#ffa500',
-                    },
-                    fontFamily: {
-                        'playfair': ['Playfair Display', 'serif'],
-                        'roboto': ['Roboto', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="dist/output.css">
 </head>
-
-<body class="bg-white text-black font-playfair">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-5xl font-bold text-center mb-12 text-highlight">Restaurante Donde la Ingrid</h1>
-
-        <!-- Contenedor principal del menú -->
-        <div id="menu-container" class="space-y-16"></div>
+<body class="bg-blue-200 text-black font-sans print:bg-white print:text-black">
+    <div class="container mx-auto px-4 py-8 print:w-full print:max-w-none print:mx-0 print:px-0 print:py-4">
+        <h1 class="text-5xl font-bold text-center mb-12 text-primary-600 font-playfair print:text-2xl print:mb-4">Restaurante Donde la Ingrid</h1>
+        <div id="menu-container" class="space-y-16 print:space-y-8">
+            <!-- Sección del menú -->
+            <div class="section flex flex-col justify-between items-center print:h-screen print:min-h-screen print:page-break-before-always">
+                
+                <!-- Contenido del menú aquí -->
+                <div class="items-container grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 print:grid-cols-3 print:gap-x-2 print:gap-y-2">
+                    <!-- Items aquí -->
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="text-center py-8 bg-white border-t-2 border-yellow-500 mt-16">
-        <p class="text-2xl mb-4 text-highlight">"Donde la Ingrid"</p>
+    <footer class="text-center py-8 bg-white border-t-2 border-primary-300 mt-16 print:hidden">
+        <p class="text-2xl mb-4 text-primary font-playfair print:text-lg">"Donde la Ingrid"</p>
         <div class="flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-4 md:space-y-0">
             <div class="flex items-center space-x-2">
-                <i class="fab fa-whatsapp text-highlight"></i>
-                <p class="text-highlight">WhatsApp: +56 9 4424 1367</p>
+                <i class="fab fa-whatsapp text-primary"></i>
+                <p class="text-primary">WhatsApp: +56 9 4424 1367</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Cargar los datos del menú desde un archivo JSON
-        fetch('data/menu.json')
-            .then(response => response.json())
-            .then(data => {
-                const menuContainer = document.getElementById('menu-container');
-
-                // Iterar sobre cada sección del menú
-                data.menu.forEach((section, index) => {
-                    // Crear el contenedor de la sección
-                    const sectionDiv = document.createElement('div');
-                    sectionDiv.id = `section-${index}`;
-                    sectionDiv.classList.add('relative', 'p-8', 'rounded-xl', 'transition', 'duration-300', 'min-h-[600px]', 'flex', 'items-center', 'border-2', 'border-orange-300', 'overflow-hidden');
-                    
-                    // Imagen de fondo
-                    const bgImage = document.createElement('img');
-                    bgImage.src = section.image;
-                    bgImage.alt = `Fondo de ${section.section}`;
-                    bgImage.classList.add('absolute', 'inset-0', 'w-full', 'h-full', 'object-cover', 'z-0');
-                    sectionDiv.appendChild(bgImage);
-
-                    // Capa semitransparente
-                    const overlay = document.createElement('div');
-                    overlay.classList.add('absolute', 'inset-0', 'bg-white', 'bg-opacity-90', 'z-10');
-                    sectionDiv.appendChild(overlay);
-
-                    // Crear el contenido de la sección
-                    const sectionContent = document.createElement('div');
-                    sectionContent.classList.add('relative', 'z-20', 'w-full', 'max-w-5xl', 'mx-auto');
-
-                    // Título de la sección
-                    const sectionTitle = document.createElement('h2');
-                    sectionTitle.classList.add('text-4xl', 'font-bold', 'mb-8', 'text-highlight', 'text-center');
-                    sectionTitle.textContent = section.section;
-                    sectionContent.appendChild(sectionTitle);
-
-                    // Contenedor de los elementos del menú
-                    const itemsDiv = document.createElement('div');
-                    itemsDiv.classList.add('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-x-8', 'gap-y-6');
-
-                    // Iterar sobre cada elemento del menú en la sección
-                    section.items.forEach(item => {
-                        const itemDiv = document.createElement('div');
-                        itemDiv.classList.add('flex', 'flex-col', 'items-center', 'space-y-4', 'bg-orange-100', 'transition', 'duration-300', 'justify-center', 'hover:bg-orange-200', 'p-8', 'rounded-xl');	
-
-                        // Agregar la imagen si existe
-                        if (item.image) {
-                            const imageWrapper = document.createElement('div');
-                            imageWrapper.classList.add('w-full', 'aspect-w-4', 'aspect-h-2');
-                            const itemImage = document.createElement('img');
-                            itemImage.src = item.image;
-                            itemImage.alt = item.name;
-                            itemImage.classList.add('w-full', 'h-full', 'object-contain', 'object-center', 'rounded-md');
-                            imageWrapper.appendChild(itemImage);
-
-                            itemDiv.appendChild(imageWrapper);
-                        }
-
-                        // Contenedor de información del elemento
-                        const itemInfo = document.createElement('div');
-                        itemInfo.classList.add('text-center', 'w-full');
-
-                        // Nombre del elemento
-                        const itemName = document.createElement('h3');
-                        itemName.classList.add('text-3xl', 'font-semibold', 'text-highlight');
-                        itemName.textContent = item.name;
-                        itemInfo.appendChild(itemName);
-
-                        // Descripción del elemento (si existe)
-                        if (item.description) {
-                            const itemDescription = document.createElement('p');
-                            itemDescription.classList.add('text-lg', 'text-gray-600', 'mt-1', 'font-roboto');
-                            itemDescription.textContent = item.description;
-                            itemInfo.appendChild(itemDescription);
-                        }
-
-                        // Precio del elemento
-                        const itemPrice = document.createElement('p');
-                        itemPrice.classList.add('text-2xl', 'font-semibold', 'text-black', 'mt-2');
-                        itemPrice.textContent = `$${item.price}`;
-                        itemInfo.appendChild(itemPrice);
-
-                        itemDiv.appendChild(itemInfo);
-                        itemsDiv.appendChild(itemDiv);
-                    });
-
-                    sectionContent.appendChild(itemsDiv);
-                    sectionDiv.appendChild(sectionContent);
-                    menuContainer.appendChild(sectionDiv);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching the JSON:', error);
-            });
-    </script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>

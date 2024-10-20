@@ -48,7 +48,7 @@
         {
           "name": "Italiano grande",
           "price": 3500,
-          "image": "img/as_italiano.jpg"
+          "image": "img/as_italiano.webp"
         },
         {
           "name": "Italiano chico",
@@ -210,19 +210,23 @@
       "items": [
         {
           "name": "Coca cola, Fanta, Sprite 237 ml",
-          "price": 1000
+          "price": 1000,
+          "image": "img/bebidas_express_1.webp"
         },
         {
           "name": "Coca cola, Fanta, Sprite 1L",
-          "price": 2000
+          "price": 2000,
+          "image": "img/bebida_1_litro_1.webp"
         },
         {
           "name": "Agua mineral con y sin gas",
-          "price": 1000
+          "price": 1000,
+          "image": "img/agua_mineral_1.webp"
         },
         {
           "name": "Jugos naturales",
-          "price": 2500
+          "price": 2500,
+          "image": "img/jugos_naturales_1.webp"
         },
         {
           "name": "Té, café, milo",
@@ -236,7 +240,8 @@
       "items": [
         {
           "name": "Mojito cubano o sabores 1/2 litro",
-          "price": 4000
+          "price": 4000,
+          "image": "img/mojito_cubano_1.jpg"
         },
         {
           "name": "Mojito cubano o sabores 1L",
@@ -244,11 +249,13 @@
         },
         {
           "name": "Mojito corona",
-          "price": 6000
+          "price": 6000,
+          "image": "img/mojito_corona_1.jpg"
         },
         {
           "name": "Ramazzotti 1/2 litro",
-          "price": 4000
+          "price": 4000,
+          "image": "img/ramazzotti_1.jpg"
         },
         {
           "name": "Ramazzotti 1L",
@@ -256,7 +263,8 @@
         },
         {
           "name": "Eléctric lemonade 1/2 litro",
-          "price": 4000
+          "price": 4000,
+          "image": "img/electric_lemonade_1.jpg"
         },
         {
           "name": "Electric lemonade 1L",
@@ -264,7 +272,8 @@
         },
         {
           "name": "Caipiriña 1/2 litro",
-          "price": 4000
+          "price": 4000,
+          "image": "img/caipirinha_1.jpg"
         },
         {
           "name": "Caipiriña 1 L",
@@ -272,7 +281,8 @@
         },
         {
           "name": "Tequila margarita",
-          "price": 4000
+          "price": 4000,
+          "image": "img/tequila_margarita_1.webp"
         }
       ]
     },
@@ -282,15 +292,18 @@
       "items": [
         {
           "name": "Cristal o Escudo 1.2",
-          "price": 3000
+          "price": 3000,
+          "image": "img/cristal_escudo.webp"
         },
         {
           "name": "Royal o Heineken",
-          "price": 3500
+          "price": 3500,
+          "image": "img/royal_heineken.webp"
         },
         {
           "name": "Malta morenita 1.2",
-          "price": 4000
+          "price": 4000,
+          "image": "img/malta_morenita.webp"
         },
         {
           "name": "Escudo y Cristal 470cc",
@@ -302,7 +315,8 @@
         },
         {
           "name": "Corona, Stella, Heineken 330cc",
-          "price": 3000
+          "price": 3000,
+          "image": "img/corona_stella_heineken.webp"
         },
         {
           "name": "Shop chico Escudo",
@@ -328,11 +342,13 @@
         },
         {
           "name": "Caña tinto",
-          "price": 1000
+          "price": 1000,
+          "image": "img/vino_tinto.jpg"
         },
         {
           "name": "Jote",
-          "price": 2000
+          "price": 2000,
+          "image": "img/jote_tinto.jpg"
         }
       ]
     }
