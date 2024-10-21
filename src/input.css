@@ -11,16 +11,9 @@
 }
 
 @media print {
-    /* Eliminar márgenes, fondos, y otros elementos que no necesites en la impresión */
+
     body {
         background-color: white !important;
         margin: 0 !important;
     }
-
-    .section {
-        height: 100vh; /* Ocupar 100% de la altura de la página */
-        padding: 5mm !important;
-        margin: 0 !important;
-        page-break-before: always; /* Cada sección comienza en una nueva página */
-    }  
 }
